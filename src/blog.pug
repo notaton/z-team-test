@@ -1,0 +1,65 @@
+extends templates/layout.pug
+block var
+  - var page = 'Blog'
+  - var grad = 'linear-gradient(rgba(14,39,80,.8), rgba(14,39,80,.8))'
+  - var headerBg = 'background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url("img/people-bg.jpg")'
+  - var headerClass = 'header__main--all'
+block content
+
+  section.container.container--1250.blog
+    div.blog__side
+      div.blog-list__wrap
+        div.blog-list__title Categories
+        ul.blog-list
+          li
+            a(href="#")
+              span Boating Accidents
+              em (3)
+          li
+            a(href="#")
+              span Boating Accidents
+              em (3)
+          li
+            a(href="#")
+              span Boating Accidents
+              em (3)
+      div.blog-list__wrap
+        div.blog-list__title Archives
+        ul.blog-list
+          li
+            span
+              span 2018
+              em.plus
+            ul.blog-list.blog-list--sub
+              li
+                a(href="#")
+                  span December
+                  em (3)
+              li
+                a(href="#")
+                  span November
+                  em (3)
+              li
+                a(href="#")
+                  span October
+                  em (3)
+          li
+            span
+              span 2017
+              em.plus
+          li
+            span
+              span 2016
+              em.plus
+
+    div.blog__wrap
+      div.title.blog__title Levinson Law Group Blog
+      - for(var i = 1; i < 9; i++)
+        div.blog-prev
+          a.blog-prev__title(href="#") Trucking Accident Insurance Settlements
+          div.blog-prev__date - Dec 19, 2017
+          div.blog-prev__desc Motor vehicle accidents are traumatic events that often inflict injuries and reverberate throughout a survivor’s life. However, truck accidents tend ...
+          a.blog-prev__link(href="#") read more
+      div.btn#true_loadmore Load more
+
+  include templates/section-contact.pug

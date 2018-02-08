@@ -1,0 +1,17 @@
+section.home-help(class = page === "Team" || page === "Accident main" ? "home-help--white" : "")
+  div.container(class = page === "Accident main" ? "container--950" : "container--1250")
+    if page !== "Accident main"
+      div.title.home-help__title How Can We <strong>Help You?</strong>
+      div.description.home-help__desc If you suffered a serious injury from the reckless actions of a negligent third party, let Levinson Law Group help. Every personal injury attorney on our team has the experience to win.
+    div.home-help__wrap
+      - for(var i = 1; i < 9; i++)
+        a.help-item(href="#")
+          i.help-item__icon.icon-i-carlsbad
+          div.help-item__title Auto<br>Accidents
+          div.help-item__text.
+            Do you trust insurance company’s to give you a fair settlement?  If not, let us help. We recovered  ~$50 million in settlements.
+          div.help-item__link learn more
+    if page !== "Accident main"
+      a.btn.home-help__link(href="#") Contact us for more information
+      div.home-help__sticker.
+        Do you want a personal injury lawyer who specializes in recovering the financial losses from your car crash? Then let Levinson Law Group help you today

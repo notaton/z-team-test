@@ -1,0 +1,24 @@
+{
+  "name": "bower for gulp-pug-scss",
+  "description": "bower for gulp based frontend builder include scss, pug",
+  "main": "index.js",
+  "authors": [
+    "Artur Volchek <a.volchek@comradeweb.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "normalize-css": "latest",
+    "owl.carousel": "latest",
+    "animate.css": "latest",
+    "magnific-popup": "latest",
+    "bxslider-4": "latest",
+    "rateYo": "rateyo#^2.3.2",
+    "jquery-form-validator": "^2.3.77"
+  }
+}

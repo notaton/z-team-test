@@ -1,0 +1,14 @@
+extends templates/layout.pug
+block var
+  - var page = '404'
+  - var grad = 'linear-gradient(rgba(14,39,80,.8), rgba(14,39,80,.8))'
+  - var headerBg = 'background-color: #031230'
+  - var headerClass = 'header__main--all'
+block content
+
+  section.page-404
+    .container
+      .content
+        .number 404
+        h1 The page you are looking for can't be found
+        a.btn Back to home

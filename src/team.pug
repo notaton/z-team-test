@@ -1,0 +1,21 @@
+extends templates/layout.pug
+block var
+  - var page = 'Team'
+  - var grad = 'linear-gradient(rgba(14,39,80,.8), rgba(14,39,80,.8))'
+  - var headerBg = 'background-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0.9) 100%), url("img/team-bg.jpg")'
+  - var headerClass = 'header__main--team'
+block content
+
+  section.container.container--1250.content
+    h2.line An elite and experienced team of legal professionals with years of combined work in the field, our lawyers have effectively recovered tens of millions of dollars for our injured clients.
+    p As members of the Million Dollar Advocates Forum® with an Avvo “Superb” rating, we are recognized by both our peers and our community as a trusted source of help and legal aid for the injured. We advocate for you, fight for your rights, and work hard to ensure that you recover fully for your losses and injuries.
+
+  
+
+  include templates/section-team.pug
+
+  include templates/section-testimonials.pug
+
+  include templates/section-contact.pug
+
+  include templates/section-categories.pug

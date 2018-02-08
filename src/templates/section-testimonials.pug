@@ -1,0 +1,10 @@
+section.home-testimonials(class = page === "Home" || page === "Testimonials" ? "home-testimonials--without-padding" : "")
+  div.title.home-testimonials__title(class = page === "Testimonials" ? "home-testimonials__title--grey" : "") Client <strong>Testimonials</strong>
+  if page !== "Testimonials"
+    include part-review.pug
+    include part-testimonial.pug
+    include part-link.pug
+  else
+    include part-testimonial.pug
+    include part-review.pug
+    include part-link.pug

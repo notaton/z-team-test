@@ -1,0 +1,34 @@
+{
+  "name": "gulp-pug-scss",
+  "version": "2.0.0",
+  "description": "Gulp based frontend builder include scss, pug",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Artur Volchek",
+  "license": "ISC",
+  "devDependencies": {
+    "bower": "latest",
+    "browser-sync": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-changed": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-iconfont": "latest",
+    "gulp-iconfont-css": "latest",
+    "gulp-iconfont-template": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-notify": "latest",
+    "gulp-plumber": "latest",
+    "gulp-pug": "latest",
+    "gulp-rigger": "latest",
+    "gulp-sass": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-uglify": "latest",
+    "gulp-watch": "latest",
+    "i": "latest",
+    "imagemin-pngquant": "latest",
+    "rimraf": "latest"
+  }
+}

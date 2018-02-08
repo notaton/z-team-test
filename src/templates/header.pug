@@ -1,0 +1,166 @@
+nav.main-nav
+  a.main-nav__logo(href="#")
+    img(src="img/logo.svg")
+  ul#nav-list.main-nav__list
+    li
+      a(href="team.html") Attorneys
+      ul.sub-menu
+        - for(var i = 1; i < 16; i++)
+          li
+            a(href="#")
+              i.icon-i-auto-accidents
+              span Attorneys
+    li
+      a(href="accident-main.html") Vehicle Accidents
+      ul.sub-menu
+        - for(var i = 1; i < 16; i++)
+          li
+            a(href="#")
+              i.icon-i-auto-accidents
+              span Vehicle Accidents
+    li
+      a(href="#") Case Results
+    li
+      a(href="#") Testimonials
+    li
+      a(href="#") Areas Served
+      ul.sub-menu
+        - for(var i = 1; i < 16; i++)
+          li
+            a(href="#")
+              i.icon-i-auto-accidents
+              span Areas Served
+  a.main-nav__phone(href="tel:+17607425221")
+    i.icon-phone
+    span (760) 742-5221
+  a.scrollto.btn.main-nav__btn(href="#contact") Schedule Free Consultation
+  span#menu-btn.main-nav__gumb
+    span
+    span
+    span
+
+header.header
+  if page == "Home"
+
+    include header-side.pug
+
+    div.header__main(style= headerBg, class= headerClass)
+      div.header__info
+        div.header__title Injured?<br>You Deserve the Best Auto Accident Law Firm in North County
+        a.header__video-link.video-popup(href="https://www.youtube.com/watch?v=ikGyZh0VbPQ") watch video <i class="icon-video"></i>
+        div.header__ratings
+          a(href="#")
+            img(src="img/badge-rating2.png")
+          a(href="#")
+            img(src="img/yalp-rating.png")
+          a(href="#")
+            img(src="img/google-rating.png")
+          a(href="#")
+            img(src="img/other-rating.png")
+
+  if page == "Team"
+
+    include header-side.pug
+
+    div.header__main(style= headerBg, class= headerClass)
+      div.header__info
+        div.header__title Your Local Vehicle Accident Attorneys
+        div.header__desc Our team of lawyers at the Levinson Law Group offers a high level of experienced advocacy for injury victims throughout Southern California.
+
+  else if page == "Accident" || page == "Accident main"
+    
+    div.header__main(style= headerBg, class= headerClass)
+      div.container.container--1250
+        div.header__title Carlsbad Auto Accident Attorney
+        div.home-contact__wrap
+          div.title.title--small.home-contact__title Injuries Sustained in a Vehicle Accident? <strong>Let Us Fight For You!</strong>
+          form.home-contact__form
+            input.input.input--name(type="text" placeholder="Name")
+            input.input.input--email(type="email" placeholder="Email")
+            input.input.input--phone(type="number" placeholder="Phone")
+            textarea.input.input--message(placeholder="Describe your case")
+            div.home-contact__submit
+              input.btn(type="submit" value="SUBMIT")
+              div.home-contact__call
+                span or call us at 
+                a(href="tel:+17607425221") (760) 742-5221
+
+  else if page == "People"
+    
+    div.header__main(style= headerBg, class= headerClass)
+      div.container.container--1250
+        .header__wrap
+          .header__title Gordon R. Levinson, Esq.
+          .header__sub-title Car Accident Attorney
+          a.header__request(href="#")
+            i.fa.fa-comments(aria-hidden="true")
+            span Request free consultation
+
+  else if page == "Template"
+    
+    div.header__main(style= headerBg, class= headerClass)
+      div.container.container--1250
+        .header__wrap
+          .header__title Template page
+          .header__sub-title About Us
+          .header__desc Our team of personal injury attorneys at the Levinson Law Group puts clients first, offering a high standard of representation and care marked by years of experience and a dedication to the interests of the injury victims we serve.
+
+  else if page == "404"
+    
+    div.header__main(style= headerBg, class= headerClass)
+
+  else if page == "Contact"
+    
+    div.header__main(style= headerBg, class= headerClass)
+      div.container.container--1250
+        .header__wrap
+          .header__sub-title Your Local
+          .header__title Vehicale Accident Attorney
+
+
+  else if page == "Results"
+    
+    div.header__main(style= headerBg, class= headerClass)
+      div.container.container--1250
+        .header__wrap
+          .header__title Choose North County's Top Auto Accident Law Firm
+          .header__sub-title OVER $45 MILLION RECOVERED
+
+  else if page == "Blog inner"
+    
+    div.header__main(style= headerBg, class= headerClass)
+      div.container.container--1250
+        .header__wrap
+          h1.header__title The Levinson Law Group Arranges Support Grant for MADD San Diego
+
+  else if page == "Blog"
+    
+    div.header__main(style= headerBg, class= headerClass)
+      div.container.container--1250
+        .header__wrap
+          h1.header__title Blog
+
+  else if page == "Videos"
+    
+    div.header__main(style= headerBg, class= headerClass)
+      div.container.container--1250
+        .header__wrap
+          h1.header__title Our videos
+
+  else if page == "Testimonials"
+    
+    div.header__main(style= headerBg, class= headerClass)
+      div.container.container--1250
+        .header__wrap
+          .header__title Your Local Auto Accident Attorney
+          .header__sub-title 3500+ Californians Served
+        div.header__ratings
+          a(href="#")
+            img(src="img/badge-rating2.png")
+          a(href="#")
+            img(src="img/yalp-rating.png")
+          a(href="#")
+            img(src="img/google-rating.png")
+          a(href="#")
+            img(src="img/other-rating.png")
+

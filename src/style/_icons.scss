@@ -1,0 +1,275 @@
+@font-face {
+  font-family: "icon-font";
+  src: url('../fonts/icon-font/icon-font.eot');
+  src: url('../fonts/icon-font/icon-font.eot?#iefix') format('eot'),
+    url('../fonts/icon-font/icon-font.woff') format('woff'),
+    url('../fonts/icon-font/icon-font.ttf') format('truetype'),
+    url('../fonts/icon-font/icon-font.svg#icon-font') format('svg');
+}
+
+@mixin icon-styles {
+  font-family: "icon-font";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  // speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+  text-decoration: none;
+  text-transform: none;
+  line-height: 1;
+  &:before{
+    display: block;
+  }
+}
+
+%icon {
+  @include icon-styles;
+}
+
+@function icon-char($filename) {
+  $char: "";
+
+  @if $filename == book {
+    $char: "\E001";
+  }
+  @if $filename == chevron-left {
+    $char: "\E002";
+  }
+  @if $filename == chevron-right {
+    $char: "\E003";
+  }
+  @if $filename == envelope {
+    $char: "\E004";
+  }
+  @if $filename == i-anchor {
+    $char: "\E005";
+  }
+  @if $filename == i-auto-accidents {
+    $char: "\E006";
+  }
+  @if $filename == i-bicycle-accidents {
+    $char: "\E007";
+  }
+  @if $filename == i-boating-accidents {
+    $char: "\E008";
+  }
+  @if $filename == i-brain-injury {
+    $char: "\E009";
+  }
+  @if $filename == i-car-1 {
+    $char: "\E00A";
+  }
+  @if $filename == i-car-2 {
+    $char: "\E00B";
+  }
+  @if $filename == i-carlsbad {
+    $char: "\E00C";
+  }
+  @if $filename == i-drunk-accidents {
+    $char: "\E00D";
+  }
+  @if $filename == i-dui-accidents {
+    $char: "\E00E";
+  }
+  @if $filename == i-encinitas {
+    $char: "\E00F";
+  }
+  @if $filename == i-escondido {
+    $char: "\E010";
+  }
+  @if $filename == i-motorcycle-accidents {
+    $char: "\E011";
+  }
+  @if $filename == i-oceanside {
+    $char: "\E012";
+  }
+  @if $filename == i-pedestrian-accidents {
+    $char: "\E013";
+  }
+  @if $filename == i-pedestrian {
+    $char: "\E014";
+  }
+  @if $filename == i-personal-lnjury {
+    $char: "\E015";
+  }
+  @if $filename == i-san-diego {
+    $char: "\E016";
+  }
+  @if $filename == i-san-marcos {
+    $char: "\E017";
+  }
+  @if $filename == i-spine-injures {
+    $char: "\E018";
+  }
+  @if $filename == i-taxi-accidents {
+    $char: "\E019";
+  }
+  @if $filename == i-traffic-crash {
+    $char: "\E01A";
+  }
+  @if $filename == i-trolley-accidents {
+    $char: "\E01B";
+  }
+  @if $filename == i-truck-accidents {
+    $char: "\E01C";
+  }
+  @if $filename == i-vista {
+    $char: "\E01D";
+  }
+  @if $filename == i-wrongful-death {
+    $char: "\E01E";
+  }
+  @if $filename == man {
+    $char: "\E01F";
+  }
+  @if $filename == map-marker {
+    $char: "\E020";
+  }
+  @if $filename == pencil {
+    $char: "\E021";
+  }
+  @if $filename == phone-2 {
+    $char: "\E022";
+  }
+  @if $filename == phone {
+    $char: "\E023";
+  }
+  @if $filename == swip {
+    $char: "\E024";
+  }
+  @if $filename == video {
+    $char: "\E025";
+  }
+  @if $filename == woman {
+    $char: "\E026";
+  }
+
+  @return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+  &:#{$insert} {
+    @if $extend {
+      @extend %icon;
+    } @else {
+      @include icon-styles;
+    }
+    content: icon-char($filename);
+  }
+}
+
+.icon-book {
+  @include icon(book);
+}
+.icon-chevron-left {
+  @include icon(chevron-left);
+}
+.icon-chevron-right {
+  @include icon(chevron-right);
+}
+.icon-envelope {
+  @include icon(envelope);
+}
+.icon-i-anchor {
+  @include icon(i-anchor);
+}
+.icon-i-auto-accidents {
+  @include icon(i-auto-accidents);
+}
+.icon-i-bicycle-accidents {
+  @include icon(i-bicycle-accidents);
+}
+.icon-i-boating-accidents {
+  @include icon(i-boating-accidents);
+}
+.icon-i-brain-injury {
+  @include icon(i-brain-injury);
+}
+.icon-i-car-1 {
+  @include icon(i-car-1);
+}
+.icon-i-car-2 {
+  @include icon(i-car-2);
+}
+.icon-i-carlsbad {
+  @include icon(i-carlsbad);
+}
+.icon-i-drunk-accidents {
+  @include icon(i-drunk-accidents);
+}
+.icon-i-dui-accidents {
+  @include icon(i-dui-accidents);
+}
+.icon-i-encinitas {
+  @include icon(i-encinitas);
+}
+.icon-i-escondido {
+  @include icon(i-escondido);
+}
+.icon-i-motorcycle-accidents {
+  @include icon(i-motorcycle-accidents);
+}
+.icon-i-oceanside {
+  @include icon(i-oceanside);
+}
+.icon-i-pedestrian-accidents {
+  @include icon(i-pedestrian-accidents);
+}
+.icon-i-pedestrian {
+  @include icon(i-pedestrian);
+}
+.icon-i-personal-lnjury {
+  @include icon(i-personal-lnjury);
+}
+.icon-i-san-diego {
+  @include icon(i-san-diego);
+}
+.icon-i-san-marcos {
+  @include icon(i-san-marcos);
+}
+.icon-i-spine-injures {
+  @include icon(i-spine-injures);
+}
+.icon-i-taxi-accidents {
+  @include icon(i-taxi-accidents);
+}
+.icon-i-traffic-crash {
+  @include icon(i-traffic-crash);
+}
+.icon-i-trolley-accidents {
+  @include icon(i-trolley-accidents);
+}
+.icon-i-truck-accidents {
+  @include icon(i-truck-accidents);
+}
+.icon-i-vista {
+  @include icon(i-vista);
+}
+.icon-i-wrongful-death {
+  @include icon(i-wrongful-death);
+}
+.icon-man {
+  @include icon(man);
+}
+.icon-map-marker {
+  @include icon(map-marker);
+}
+.icon-pencil {
+  @include icon(pencil);
+}
+.icon-phone-2 {
+  @include icon(phone-2);
+}
+.icon-phone {
+  @include icon(phone);
+}
+.icon-swip {
+  @include icon(swip);
+}
+.icon-video {
+  @include icon(video);
+}
+.icon-woman {
+  @include icon(woman);
+}

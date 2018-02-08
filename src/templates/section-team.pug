@@ -1,0 +1,41 @@
+section.home-team(class = page === "Accident" || page === "Accident main" || page === "Team" ? "home-team--grey" : "")
+  div.container(class = page === "Team" ? "container--1250" : "container--950")
+    if page !== "Team"
+      div.title.home-team__title Our <strong>Team</strong>
+      div.description.home-team__desc Over 40 Combined Years of Experience - Over 3,500 Californians Represented - Nearly $50 Million Recovered
+    div.home-team__wrap(class = page === "Accident" || page === "Accident main" ? "home-team__wrap--slider owl-carousel" : "" class = page === "Team" ? "home-team__wrap--team" : "")
+      if page == "Team"
+        - var i = 3
+        while (i-- > 0)
+          div.team-item-big(class = i & 1 ? "team-item-big--reverse" : "")
+            .team-item-big__img
+              img(src="img/team--01.jpg")
+            .team-item-big__text
+              .team-item-big__title Gordon R. Levinson, Esq.
+              .team-item-big__group
+                .team-item-big__item
+                  i.icon-pencil
+                  div.
+                    <span>Specialize on:</span><br>Car Accidents,  Personal injuries
+                .team-item-big__item
+                  i.icon-phone-2
+                  div.
+                    <span>Phone:</span><br><a href="tel:+17607425221">(760) 742-5221</a>
+                .team-item-big__item
+                  i.icon-envelope
+                  div.
+                    <span>Email:</span><br><a href="mailto:gordon@levinsonlawgroup.com">gordon@levinsonlawgroup.com</a>
+              div.content.team-item-big__content
+                h2.line Dedicated Advocacy for the Injured in Southern California
+                p Gordon Levinson is a former insurance defense / personal injury litigator who represented some of the largest insurance companies in North America. Prior to founding the Levinson Law Group, he served as an associate in numerous law firms from 1996 to 2003 before working as a partner in a personal injury firm from 2004 to 2007. Managing his own law…
+              a.team-item-big__link(href="#") Learn More
+
+      - var i = 0
+      while (i++ < 9)
+        a.team-item(href="#" class = i <= 3 && page === "Team" ? "hidden" : "")
+          img.team-item__img(src="img/team--01.jpg")
+          div.team-item__desc
+            div.team-item__title Gordon R. Levinson, Esq.
+            div.team-item__link Learn More
+    if page == "Home"
+      a.btn.home-team__link(href="#") Talk to our team

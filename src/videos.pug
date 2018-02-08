@@ -1,0 +1,46 @@
+extends templates/layout.pug
+block var
+  - var page = 'Videos'
+  - var grad = 'linear-gradient(rgba(14,39,80,.8), rgba(14,39,80,.8))'
+  - var headerBg = 'background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url("img/people-bg.jpg")'
+  - var headerClass = 'header__main--all'
+block content
+
+  section.container.container--1250.content
+    p.
+      We do things differently at Levinson Law Group, and nothing explains this better than the words of our own team members. We encourage you to watch the short video clips on this page to get a more comprehensive understanding of what we do here, what we’re about, and how we treat clients throughout the legal process.
+
+  section.container.container--1250.videos
+    div.title.videos__title(href="#") Personal <strong>injury</strong>
+    div.videos__wrap
+      - for(var i = 1; i < 10; i++)
+        div.video-block
+          div.video-block__title.
+            Valuable tips from a former insurance lawyer -
+            Winning your auto accident case
+          a.video-block__link.video-popup(href="video/small.mp4" style="background-image: url('img/video-block--01.png');")
+            i.icon-video
+
+  section.container.container--1250.videos
+    div.title.videos__title(href="#") <strong>Testimonials</strong>
+    div.videos__wrap
+      - for(var i = 1; i < 10; i++)
+        div.video-block
+          div.video-block__title.
+            Valuable tips from a former insurance lawyer -
+            Winning your auto accident case
+          a.video-block__link.video-popup(href="video/small.mp4" style="background-image: url('img/video-block--01.png');")
+            i.icon-video
+
+  section.container.container--1250.videos
+    div.title.videos__title(href="#") Featured <strong>videos</strong>
+    div.videos__wrap
+      - for(var i = 1; i < 10; i++)
+        div.video-block
+          div.video-block__title.
+            Valuable tips from a former insurance lawyer -
+            Winning your auto accident case
+          a.video-block__link.video-popup(href="video/small.mp4" style="background-image: url('img/video-block--01.png');")
+            i.icon-video
+
+  include templates/section-contact.pug

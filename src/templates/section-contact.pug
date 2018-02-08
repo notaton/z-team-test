@@ -1,0 +1,38 @@
+section#contact.home-contact(class = page === "Home" || page === "404" || page === "Accident" || page === "People" || page === "Team" || page === "Template" || page === "Testimonials" ? "home-contact--grey" : "")(class = page === "Contact" ? "home-contact--contact" : "")
+  div.home-contact__wrap
+    div.title.title--small.home-contact__title Injured? <strong>Let Us Call You About Your Case</strong>
+    form.home-contact__form
+      input.input.input--name(type="text" placeholder="Name")
+      input.input.input--email(type="email" placeholder="Email")
+      input.input.input--phone(type="number" placeholder="Phone")
+      textarea.input.input--message(placeholder="Describe your case")
+      div.home-contact__submit
+        input.btn(type="submit" value="SUBMIT")
+        div.home-contact__call
+          span or call us at 
+          a(href="tel:+17607425221") (760) 742-5221
+  if page == "Contact"
+    div.content.home-contact__info
+      h2.line At Levinson Law Group, we fight to win. We are the vehicle crash injury experts.  Vehicle crashes:  that’s all we do.
+      p.contact Areas<br><strong>We Service</strong>
+      ul.line.contact
+        li
+          a(href="#") San Diego
+        li
+          a(href="#") Carlsbad
+        li
+          a(href="#") Oceanside
+        li
+          a(href="#") San Marcos
+        li
+          a(href="#") Escondido
+        li
+          a(href="#") Encinitas
+        li
+          a(href="#") Vista
+        li
+          a(href="#") Fallbrook
+      p.contact.
+        Contact us today for a free, confidential consultation. <strong>You don’t pay unless we win your case.</strong>
+  else
+    div.home-contact__img(style = page === "People" ? "background-image: url('img/people-contact.jpg');" : "background-image: url('img/home-contact.jpg');")

@@ -1,0 +1,57 @@
+section.toggle-map
+  div.toggle-map__list
+    div.toggle-map__item.active(onclick="clearMarkers(); addMarker({lat: 33.1299269, lng: -117.2814965});") Carlsbad office
+    div.toggle-map__item(onclick="clearMarkers(); addMarker({lat: 33.1914674, lng: -117.3284758});") Oceanside Office
+  div#map.toggle-map__body
+  div.toggle-map__info.active
+    div.toggle-map__hour-title hours of operation
+    div.toggle-map__hour Mon-Fri 7:00 am - 10:00 pm
+    div.toggle-map__title Carlsbad office
+    div
+      span 5927 Balfour Court<br>Suite 201, Carlsbad,<br>CA 92008
+  div.toggle-map__info
+    div.toggle-map__hour-title hours of operation
+    div.toggle-map__hour Mon-Fri 7:00 am - 10:00 pm
+    div.toggle-map__title Oceanside office
+    div
+      span 2003 S El Camino Real<br>#120, Oceanside,<br>CA 92054
+
+script.
+  var map;
+  var markers = [];
+
+  function initMap() {
+    var mapCenter = {lat: 33.1299269, lng: -117.2814965};
+
+    map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 10,
+      center: mapCenter,
+      mapTypeControl: false
+    });
+
+    addMarker(mapCenter);
+  }
+
+  // Adds a marker to the map and push to the array.
+  function addMarker(location) {
+    var marker = new google.maps.Marker({
+      position: location,
+      map: map,
+      icon: 'img/marker.png'
+    });
+    markers.push(marker);
+  }
+
+  // Removes the markers from the map, but keeps them in the array.
+  function clearMarkers() {
+    setMapOnAll(null);
+  }
+
+  // Sets the map on all markers in the array.
+  function setMapOnAll(map) {
+    for (var i = 0; i < markers.length; i++) {
+      markers[i].setMap(map);
+    }
+  }
+
+script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPiY8Igdodm4dlsvUVMaR5LwqLb5y7jEs&callback=initMap" async defer)

@@ -1,0 +1,25 @@
+extends templates/layout.pug
+block var
+  - var page = 'Results'
+  - var grad = 'linear-gradient(rgba(14,39,80,.8), rgba(14,39,80,.8))'
+  - var headerBg = 'background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url("img/relults-bg.jpg")'
+  - var headerClass = 'header__main--all'
+block content
+
+  section.container.container--1250.content
+    h2.line Our Victories
+    p.
+      At Levinson Law Group, we fight to win – a quick look at our past results proves exactly that. With more than 40 years of experience to our name, we know what it takes to win a case, and we will stop at nothing in our fight for maximum compensation on behalf of the clients we represent in North San Diego County. If you or someone you love was seriously injured, do not wait to speak with a Carlsbad personal injury lawyer at our office. We would be happy to meet with you free of charge for a case consultation so we can discuss the details of your accident.
+
+  section.container.results
+    - for(var i = 1; i < 4; i++)
+      div.results-item
+        div.results-item__half
+          div.results-item__info <span>$1.25</span>m
+          div.results-item__hover
+            i.icon-i-auto-accidents
+        div.results-item__half
+          div.results-item__info  Auto accident
+          div.results-item__hover Auto Collision with co-counsel
+
+  include templates/section-contact.pug

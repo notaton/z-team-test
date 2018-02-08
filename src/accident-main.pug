@@ -1,0 +1,33 @@
+extends templates/layout.pug
+block var
+  - var page = 'Accident main'
+  - var grad = 'linear-gradient(rgba(14,39,80,.8), rgba(14,39,80,.8))'
+  - var headerBg = 'background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url("img/accident-mail-bg.jpg")'
+  - var headerClass = 'header__main--accident'
+block content
+
+  section.container.container--1250.content.content--column
+    h1 Cases We Handle
+    p.line.
+      If you are suffering from a serious injury sustained by the reckless actions of a negligent third party, the Levinson Law Group can help. For more than 40 years combined, we have represented injury victims throughout North San Diego County, and we’re ready to do the same for you. 
+    p.
+      We know that dealing with the legal aspects of an accident can be overwhelming, and we don’t want your focus to be on anything other than your physical and emotional recovery.
+    p.
+      Our owner and lead counsel Gordon Levinson previously represented some of the largest insurance companies in the United States. Now, he uses his insider knowledge to stand up for victims and families who have suffered car accidents, truck accidents, motorcycle accidents, spinal injuries, brain injuries, burn injuries, wrongful death, texting and driving accidents, drunk driving accidents, and personal injury.
+
+  section.container.container--1250.logo-group
+    - for(var i = 1; i < 8; i++)
+      a(href="#")
+        img(src="img/logo--0" + i + ".png")
+
+  include templates/section-area.pug
+
+  include templates/section-categories.pug
+
+  include templates/section-intro.pug
+
+  include templates/section-contact.pug
+
+  include templates/section-testimonials.pug
+
+  include templates/section-team.pug

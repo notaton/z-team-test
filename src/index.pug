@@ -1,0 +1,70 @@
+extends templates/layout.pug
+block var
+  - var page = 'Home'
+  - var grad = 'linear-gradient(rgba(14,39,80,.8), rgba(14,39,80,.8))'
+  - var headerBg = 'background-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0.9) 100%), url("img/header-bg--main.jpg")'
+  - var headerClass = 'header__main--home'
+block content
+
+  include templates/section-intro.pug
+
+  include templates/section-victories.pug
+
+  include templates/section-team.pug
+
+  include templates/section-categories.pug
+
+  section.home-community
+    div.container.container--1250.home-community__wrap
+      img.home-community__bg(src="img/peoples.jpg")
+      div.home-community__info
+        div.home-community__title Giving Back<br><strong>to Our Community</strong>
+        div.home-community__body
+          p.
+            <strong>We believe that giving back is part of our commitment to the north county community.</strong>
+          p.
+            We are passionate about helping others and we show it through our charitable work with the Levinson Foundation.
+        div.home-community__contact.
+          Learn more about the Levinson Foundation
+          by calling our office at <a href="tel:+17607425221">(760) 742-5221</a>
+
+  include templates/section-testimonials.pug
+
+  section.exclusive(style="background:" + grad + ", url('img/exclusive.jpg');")
+    div.container.container--1250
+      div.title.exclusive__title The Exclusive <strong>LLG 3 Guarantees</strong>
+      div.exclusive__wrap
+        a.exclusive-item(href="#")
+          div.exclusive-item__text.
+            You Will Net More Money as a Result Of Retaining Our Firm
+          div.exclusive-item__number 01
+        a.exclusive-item(href="#")
+          div.exclusive-item__text.
+            You Will Put Money Into Your Pocket Even If Your Medical Bills Are Greater Than The Insurance Policy Limits
+          div.exclusive-item__number 02
+        a.exclusive-item(href="#")
+          div.exclusive-item__text.
+            You Pay Nothing Unless We Win Your Case
+          div.exclusive-item__number 03
+      div.exclusive__desc.
+        You Can Have 100% Confidence in Our Carlsbad Personal Injury Lawyers
+      div.exclusive__link
+        a.btn.btn--white(href="#") learn more
+
+  section.container.container--1250.blog.blog--home
+    div.blog__wrap
+      div.title.blog__title Levinson Law Group Blog
+      - for(var i = 1; i < 4; i++)
+        div.blog-prev
+          a.blog-prev__title(href="#") Trucking Accident Insurance Settlements
+          div.blog-prev__date - Dec 19, 2017
+          div.blog-prev__desc Motor vehicle accidents are traumatic events that often inflict injuries and reverberate throughout a survivor’s life. However, truck accidents tend ...
+          a.blog-prev__link(href="#") read more
+    div.btn#true_loadmore view all posts
+
+  include templates/section-contact.pug
+
+
+
+
+

@@ -1,0 +1,14 @@
+doctype html
+include data.pug
+include mixins.pug
+html(lang='en')
+  head
+    block var
+    include head.pug
+  body
+    include header.pug
+
+    block content
+
+    include footer.pug
+    include scripts.pug

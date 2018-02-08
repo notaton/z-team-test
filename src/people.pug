@@ -1,0 +1,67 @@
+extends templates/layout.pug
+block var
+  - var page = 'People'
+  - var grad = 'linear-gradient(rgba(14,39,80,.8), rgba(14,39,80,.8))'
+  - var headerBg = 'background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url("img/people-bg.jpg")'
+  - var headerClass = 'header__main--all'
+block content
+
+  section.people-info.container.container--1250
+    .people-info__wrap
+      .people-info__info
+        .people-info__item
+          i.icon-map-marker
+          div.
+            <span>Served Areas:</span> South California - San Diego, Carlsbad, Oceanside, San Marcos, Escondido, Encinitas, Vista
+        .people-info__item
+          i.icon-book
+          div.
+            <span>Education:</span> University of San Francisco School of Law
+        .people-info__item
+          i.icon-pencil
+          div.
+            <span>Specialize on:</span> Car Accidents,  Personal injuries
+        .people-info__item
+          i.icon-phone-2
+          div.
+            <span>Phone:</span> <a href="tel:+17607425221">(760) 742-5221</a>
+        .people-info__item
+          i.icon-envelope
+          div.
+            <span>Email:</span> <a href="mailto:gordon@levinsonlawgroup.com">gordon@levinsonlawgroup.com</a>
+      .people-info__img(style="background-image: url('img/people.jpg');")
+
+  section.container.container--1250.content.content--column
+    h1 Bio
+    h2.line Dedicated Advocacy for the Injured in Southern California
+    p.
+      Gordon Levinson is a former insurance defense / personal injury litigator who represented some of the largest insurance companies in North America. Prior to founding the Levinson Law Group, he served as an associate in numerous law firms from 1996 to 2003 before working as a partner in a personal injury firm from 2004 to 2007. Managing his own law firm has enabled him to represent clients and serve his community with his signature approach: Diligent community involvement, integrity in advocacy, and supportive, results-driven representation.
+    p.
+      The Levinson Law Group focuses on cases involving auto accidents in Southern California. The attorneys at the firm, led by Mr. Levinson, exhibit excellence and commitment to each and every client, fighting passionately for the rights of injury victims and bereaved families in Southern California in personal injury and wrongful death cases. Gordon is proud to be a long-time leader in the community, giving back to local charitable organizations through the Levinson Foundation and serving as an actively involved advisory board member for Mothers Against Drunk Driving (MADD).
+    h2 Aggressive & Effective Trial Attorney Serving Carlsbad, CA
+    p.
+      Over the course of his career to date, Gordon has had success in representing over 3,000 unique clients, and has either appeared or submitted briefs in:
+    ul
+      li Over 30 county superior courts
+      li 3 federal district trial courts
+      li 3 state courts of appeal
+      li The state Supreme Court
+    p.
+      An experienced and high-achieving trial lawyer, Gordon has brought the Levinson Law Group to the forefront of personal injury law in the region. The firm is a 5-star practice with overwhelmingly positive Yelp and Avvo reviews and a steady stream of referrals from previous clients, doctors, other attorneys, and even judges and court staff members who recognize the Levinson Law Group as an effective and outstanding advocate for the injured.
+    h2 20 Years of Experience on Your Side
+    p.
+      Gordon graduated from the University of San Francisco School of Law with his Juris Doctorate degree in 1996. During his time in law school, he was a member of the Law Review. He was also a decorated Moot Court competitor, representing his school in a national competition where he received the highest score of any individual competitor—a perfect 100.
+    p.
+      Before founding the Levinson Law Group, Gordon’s prior experience as an insurance industry insider significantly benefits his clients, as he is able to bring a unique perspective and understanding to these cases, implementing customized case management systems to maximize their recovery and to ensure they receive the compensation to which they are entitled. When he is not in the office, Gordon enjoys spending time with his wife and children. A musician and avid surfer, he spends much of his free time traveling and coaching youth basketball.
+    h3 Education
+    p.line.
+      Gordon graduated from the University of San Francisco School of Law with his Juris Doctorate degree in 1996. During his time in college, he was a member of the Law Review. He was also a decorated Moot Court competitor, representing his school in a national competition where he received the highest score of any individual competitor—a perfect 100.
+    h3 Employment
+    p.line.
+      Before founding the Levinson Law Group, Gordon’s prior experience as an insurance industry insider significantly benefits his clients, as he is able to bring a unique perspective and understanding to these cases, implementing customized case management systems to maximize their recovery and to ensure they receive the compensation to which they are entitled. When he is not in the office, Gordon enjoys spending time with his wife and children. A musician and avid surfer, he spends much of his free time traveling and coaching youth basketball.
+
+  include templates/section-contact.pug
+
+  include templates/section-victories.pug
+
+  include templates/section-map.pug
